@@ -1,0 +1,435 @@
+.stepper-container {
+  margin-bottom: 2rem;
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-container:hover {
+  border-color: #1976d2;
+  background-color: #f0f7ff;
+}
+
+.upload-icon {
+  font-size: 3rem;
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.image-preview {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.analysis-card {
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.result-chip {
+  margin: 0.5rem;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.success-message {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.upload-area {
+  border: 2px dashed rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.upload-area:hover {
+  border-color: #1976d2;
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.upload-area.drag-active {
+  border-color: #4caf50;
+  background-color: rgba(76, 175, 80, 0.04);
+}
+
+.analysis-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analysis-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.result-section {
+  animation: fadeIn 0.5s ease;
+}
+
+.confidence-indicator {
+  transition: width 0.5s ease;
+}
+
+.step-animation-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.step-animation-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.step-animation-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.step-animation-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.progress-circle {
+  transition: all 0.3s ease;
+}
+
+.progress-circle-background {
+  fill: none;
+  stroke: #f0f0f0;
+}
+
+.progress-circle-progress {
+  fill: none;
+  stroke: #1976d2;
+  stroke-linecap: round;
+  transform-origin: center;
+  transform: rotate(-90deg);
+}
+
+.health-score-indicator {
+  position: relative;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.health-score-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #1976d2);
+  transition: width 0.5s ease;
+}
+
+.risk-factor-chip {
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+.risk-factor-chip:hover {
+  transform: scale(1.05);
+}
+
+.compatibility-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.compatibility-high {
+  background-color: #4caf50;
+}
+
+.compatibility-medium {
+  background-color: #ff9800;
+}
+
+.compatibility-low {
+  background-color: #f44336;
+}
+
+.analysis-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.upload-section:hover {
+  border-color: #1976d2;
+  background-color: rgba(25, 118, 210, 0.04);
+}
+
+.analysis-steps {
+  margin: 2rem 0;
+}
+
+.step-content {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-section {
+  margin-top: 2rem;
+}
+
+.result-card {
+  margin-bottom: 1rem;
+}
+
+.confidence-meter {
+  height: 8px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  overflow: hidden;
+}
+
+.confidence-bar {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.dna-analysis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.analysis-item {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.analysis-item h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1976d2;
+}
+
+.analysis-item ul {
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.error-message {
+  color: #d32f2f;
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .analysis-container {
+    padding: 1rem;
+  }
+  
+  .dna-analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.dna-analysis-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dna-analysis-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dna-analysis-steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.dna-analysis-step {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.dna-analysis-step.active {
+  background: rgba(25, 118, 210, 0.2);
+  border: 1px solid rgba(25, 118, 210, 0.5);
+}
+
+.dna-analysis-step.completed {
+  background: rgba(76, 175, 80, 0.2);
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.dna-analysis-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.dna-upload-area {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dna-upload-area:hover {
+  border-color: rgba(25, 118, 210, 0.5);
+  background: rgba(25, 118, 210, 0.1);
+}
+
+.dna-analysis-results {
+  margin-top: 2rem;
+}
+
+.dna-analysis-chart {
+  width: 100%;
+  height: 400px;
+  margin: 2rem 0;
+}
+
+.dna-analysis-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.dna-analysis-button {
+  min-width: 150px;
+}
+
+.dna-analysis-progress {
+  margin: 2rem 0;
+}
+
+.dna-analysis-error {
+  color: #f44336;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(244, 67, 54, 0.1);
+  border-radius: 8px;
+}
+
+.dna-analysis-success {
+  color: #4caf50;
+  text-align: center;
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .dna-analysis-steps {
+    flex-direction: column;
+  }
+
+  .dna-analysis-step {
+    margin: 0.5rem 0;
+  }
+
+  .dna-analysis-actions {
+    flex-direction: column;
+  }
+
+  .dna-analysis-button {
+    width: 100%;
+  }
+} 

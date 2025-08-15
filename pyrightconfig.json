@@ -1,0 +1,9 @@
+{
+    "include": [
+        "backend/src"
+    ],
+    "extraPaths": [
+        "backend/venv/lib/python3.10/site-packages"
+    ],
+    "reportMissingImports": false
+} 
